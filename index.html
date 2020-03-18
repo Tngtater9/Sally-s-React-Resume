@@ -24,18 +24,17 @@
   
   <script type="text/babel">
 
-    function Header (){
+    function Header (props){
         return (<header>
-            <h1>Sally Student</h1>
-            <ContactInfo />
-        </header>
-        );
+                {props.children}
+                </header>
+                );
     }
     function ContactInfo(){
-        return(            <address>
-                <a href="mailto:s.student@heremail.com">S.student@heremail.com</a><br/>
-                <a href="tel: 5558670309">(555)867-0309</a>
-            </address>)
+        return( <address>
+                    <a href="mailto:s.student@heremail.com">S.student@heremail.com</a><br/>
+                    <a href="tel: 5558670309">(555)867-0309</a>
+                </address>)
     }
 
     function Main (){
@@ -115,7 +114,10 @@
 
     function Resume () {
         return (<div>
-                    <Header />
+                    <Header>
+                        <h1>Sally Student</h1>
+                    </Header>
+                    <ContactInfo />
                     <Main />
                 </div>)
     }
