@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="application-root"></div>
+  
+  <script
+    src="https://unpkg.com/react@16/umd/react.development.js">
+  </script>
+  <script
+    src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+  </script>
+  <script
+    src="https://unpkg.com/babel-standalone@6/babel.min.js">
+  </script>
+  
+  <script type="text/babel">
+
+    function Header (){
+        return (<header>
+            <h1>Sally Student</h1>
+            <ContactInfo />
+        </header>
+        );
+    }
+    function ContactInfo(){
+        return(            <address>
+                <a href="mailto:s.student@heremail.com">S.student@heremail.com</a><br/>
+                <a href="tel: 5558670309">(555)867-0309</a>
+            </address>)
+    }
+
+    function Main (){
+        return (
+            <main>
+                <ProfilePic />
+                <Summary />
+                <Education />
+                <EmploymentHistory />
+                <Skills />
+            </main>
+        )
+    }
+
+    function ProfilePic () {
+        return (<figure>
+            <img src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg" alt="Sally Student on a good day" width="171px" height="256px"/> 
+            <figcaption>Sally Student</figcaption>
+            </figure>)
+    }
+
+    function Summary () {
+        return (<section>
+            <h2>Summary</h2>
+            <p>Focused and quick-learning Software Engineer with 3 years of experience in computer science, programming, and UX design for various projects and clients.</p>
+            </section>)
+    }
+
+    function Education () {
+        return (<section>
+                <h2>Education</h2>
+                <h3>Hawaii Western</h3>
+                <h4><em>Aug '10 - May '14</em></h4>
+                <p>Bachelor of Science in Electrical Engineering</p>
+                </section>)
+    }
+
+    function EmploymentHistory () {
+        return (<section>
+                <h2>Employment History</h2>
+                <h3>Crane & Jenkins, Software Engineer</h3>
+                <h4>Feb '15 - Current</h4>
+                <ul>
+                    <li>Integrate code changes, test code changes, and document code changes</li>
+                    <li>Developed Perl and PHP scripts to translate data between applications</li>
+                    <li>Developed automation scripts to test storage appliances in Python</li>
+                    <li>Practice agile development methodologies and work with current networking technologies</li>
+                    <li>Used Hadoop to build a scalable distributed data solution</li>
+                </ul>
+                <h3>Tradelot, Software Developer</h3>
+                <h4>Current - Current</h4>
+                <ul>
+                    <li>Wrote, modified, and debugged software for clients</li>
+                    <li>Developed code to complete assigned project by deadline</li>
+                    <li>Developed HTML, CSS, JavaScript, and JSP pages for user interaction</li>
+                    <li>Wrote Python scripts to load data and parse XML documents</li>
+                </ul>
+                </section>)
+    }
+
+    function Skills () {
+        return (<section>
+                <h2>Skills</h2>
+                <ul>
+                    <li>Certified Scrum Master</li>
+                    <li>Cisco Certified Network Associate</li>
+                    <li>Cisco Certified Network Professional Security</li>
+                    <li>Unix and Linux</li>
+                    <li>Oracle</li>
+                    <li>SQL</li>
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>HTML</li>
+                </ul>
+                </section>)
+    }
+
+    function Resume () {
+        return (<div>
+                    <Header />
+                    <Main />
+                </div>)
+    }
+    ReactDOM.render(<Resume />, document.querySelector('#application-root')
+    );
+  </script>
+  </body>
+</html>
