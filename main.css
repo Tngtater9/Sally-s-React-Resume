@@ -1,0 +1,10 @@
+body {
+    text-align: center;
+}
+ul {
+  list-style: none;
+}
+p {
+    width:50%;
+    margin:auto;
+}
